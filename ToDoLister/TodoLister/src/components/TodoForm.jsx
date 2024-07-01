@@ -28,9 +28,6 @@ function TodoForm() {
       // Render a form element with an onSubmit event handler set to the add function.
       <form onSubmit={add}  className="flex">
 
-          // Render an input element for the todo text.
-          // The value of the input is set to the todo state variable, and the onChange event handler
-          // updates the todo state variable when the input changes.
           <input
               type="text"
               placeholder="Write Todo..."
@@ -39,7 +36,6 @@ function TodoForm() {
               onChange={(e) => setTodo(e.target.value)}
           />
 
-          // Render a button element for submitting the form.
           <button type="submit" className="rounded-r-lg px-3 py-1 bg-green-600 text-white shrink-0">
               Add
           </button>

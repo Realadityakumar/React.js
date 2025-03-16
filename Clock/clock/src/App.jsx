@@ -14,12 +14,20 @@ function App() {
   function stopClock(){
     clearInterval(timer.current);
   }
+  function resetClock(){
+    clearInterval(timer.current);
+    setCurrentClock(0);
+
+  }
+
   return (
     <>
-     {currentClock}
+     {currentClock} {currentClock === 0 ? "second": "seconds"}
      <br />
      <button onClick={startClock}>start</button>
     <button onClick={stopClock}>stop</button>
+    <button onClick={resetClock}>reset</button>
+
     </>
   )
 }
